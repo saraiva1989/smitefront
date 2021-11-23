@@ -11,12 +11,11 @@ function componentCardDeus(data) {
     let card = `
     <div id="card-deus" class="card-deus">
         <div class="avatar">
-            <div class="avatar-background" alt="Avatar"
-                style=" background-image: url(${data.imagem.replace("'", "")});">
+            <img src='${data.imagem.replace("'", "")}' class="avatar-background" loading='lazy'>
                 <div class="nome">
                     <h1><b>${data.nome}</b></h4>
                 </div>
-            </div>
+            </img>
         </div>
 
         <div class="detalhe-deus">
