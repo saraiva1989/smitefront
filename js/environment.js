@@ -12,7 +12,7 @@ function urlApi() {
 
     arrayHostDev.forEach(element => {
         if (window.location.host === element) {
-            urlAPISmite = 'https://smite.azurewebsites.net/api/Deuses/'
+            urlAPISmite = 'https://smitedev.azurewebsites.net/api/Deuses/'
             document.getElementById('ambiente-dev').style.display = 'block'
         }
     })

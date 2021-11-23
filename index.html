@@ -10,13 +10,30 @@
 
 <body>
     <div id="loading" class="loader"></div>
+    
+    <div id="modal-pesquisa" class="modal-pesquisa-hide" >
+        <h2>Pesquisa</h2>
+        <hr>
+        <p>Cultura:</p>
+        <select name="cultura" id="cultura" title="cultura" onchange="pesquisa()">
+          </select>
+
+          <p>Classe:</p>
+          <select name="classe" id="classe" title="classe" onchange="pesquisa()">
+          </select>
+          <p>Nome:</p>
+          <input id="nome-deus" type="text" onkeyup="pesquisa()" placeholder="Pesquisar por nome">
+          <button onclick="ocultarPorId('modal-pesquisa')">fechar</button>
+          
+    </div>
+
     <div id="principal">
         <div id="topo" class="topo">
             <div class="ambiente-dev" id="ambiente-dev">Ambiente DEV</div>
             <div class="logo"><img src="img/smite-logo.webp" alt=""></div>
-            <div class="search"><img src="img/search.png" alt="" style="display: none;"></div>
+            <div class="search" onclick="mostrarPorId('modal-pesquisa')"><img src="img/search.png" alt=""></div>
         </div>
-        <div id="conteudo">
+        <div id="conteudo" onclick="ocultarPorId('modal-pesquisa')">
         </div>
     </div>
 
@@ -24,6 +41,7 @@
     <script src="js/indexComponentes.js"></script>
     <script src="js/geral.js"></script>
     <script>
+        montarSelects()
         buscarDeuses()
     </script>
 </body>
