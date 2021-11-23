@@ -84,8 +84,9 @@ body {
 
   .avatar-background {
       height: 425px;
-      background-size: cover;
-      background-position: center center
+
+      object-fit: cover;
+      width: 100%;
   }
   
   .card-deus:hover {
@@ -339,10 +340,6 @@ body {
 
 
   @media only screen and (max-width: 1024px) {
-    body {
-      /* background-color: lightblue; */
-    }
-    
     .banner-img {
         background-position: center center;
     }
@@ -369,10 +366,6 @@ body {
   }
 
   @media only screen and (max-width: 430px) {
-    body {
-      /* background-color: rgb(3, 24, 31); */
-    }
-
     .card-detalhe.flex {
         flex-direction: column;
     }
