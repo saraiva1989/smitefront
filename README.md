@@ -2,9 +2,9 @@
 
 Esse projeto tem como objetivo listar os personagens disponiveis no jogo SMITE, mostrando suas habilidades e informações.
 
-para acessar o projeto, acesse o site - https://saraiva1989.github.io/smitefront/
+para acessar o projeto em produção, acesse o site - https://saraiva89.com/prod/smite
 
-para acessar o ambiente de dev, acesse o site - https://smitedev.netlify.app/
+para acessar o ambiente de dev, acesse o site - https://saraiva89.com/dev/smite
 
 ![image](https://user-images.githubusercontent.com/40599423/143307552-a8fe4c59-b1bb-46cf-87e6-943647266c7c.png)
 
@@ -17,7 +17,9 @@ para acessar o ambiente de dev, acesse o site - https://smitedev.netlify.app/
 
 Esse projeto é o front-end e está sendo usado apenas HTML, CSS e JAVASCRIPT.
 
-Os dados dos Deuses provém da api https://github.com/saraiva1989/smiteAPI que foi desenvolvido em ASP NETCORE
+(ESSA API EXISTE MAIS NÂO ESTÀ SENDO MAIS USADA, DEVIDO AO CUSTO NO AZURE) Os dados dos Deuses provém da api https://github.com/saraiva1989/smiteAPI que foi desenvolvido em ASP NETCORE
+
+Os dados dos Deuses provém da api https://github.com/saraiva1989/smitebackphp que foi desenvolvido em PHP
 
 # Contribuir com projeto
 
