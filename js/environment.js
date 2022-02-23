@@ -1,19 +1,17 @@
 var urlAPISmite = ""
-const arrayHostDev = ["smitedev.netlify.app", "localhost:5500", "127.0.0.1:5500", "192.168.31.25:5500"]
-const arrayHostProd = ["saraiva1989.github.io"]
+const arrayHostDev = ["smitedev.netlify.app", "localhost:5500", "127.0.0.1:5500", "192.168.31.25:5500",
+                        "https://saraiva89.com/dev/smite/"]
+const arrayHostProd = ["https://saraiva89.com/prod/smite/"]
 urlApi()
 
 function urlApi() {
-    arrayHostProd.forEach(element => {
-        if (window.location.host === element) {
-            urlAPISmite = 'https://smite.azurewebsites.net/api/Deuses/'
-        }
-    });
+   
+    if (arrayHostDev.filter(x => x.includes('/dev/smite/') || x.includes(":5500")).length > 0) {
+        urlAPISmite = 'https://saraiva89.com/dev/smiteapi/'
+        return;
+    }
 
-    arrayHostDev.forEach(element => {
-        if (window.location.host === element) {
-            urlAPISmite = 'https://smitedev.azurewebsites.net/api/Deuses/'
-            document.getElementById('ambiente-dev').style.display = 'block'
-        }
-    })
+    else {
+        urlAPISmite = 'https://saraiva89.com/prod/smiteapi/'
+    }
 }

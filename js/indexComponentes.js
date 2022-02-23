@@ -1,28 +1,28 @@
 
 function componentCardDeus(data) {
-    let redireciona = `detalhes.html?${data.nomeEN}`
+    let redireciona = `detalhes.html?${data.NomeEN}`
     let compartilhar = ''
     if(document.documentElement.clientWidth < 1025) {
-        redireciona = `detalhesMobile.html?${data.nomeEN}`
-        compartilhar = `<div class="btn-padrao" id="compartilhar" onclick="compartilhar('${data.nomeEN}','${data.nome}')">
+        redireciona = `detalhesMobile.html?${data.NomeEN}`
+        compartilhar = `<div class="btn-padrao" id="compartilhar" onclick="compartilhar('${data.NomeEN}','${data.Nome}')">
                             <a>compartilhar</a>
                         </div>`
     }
     let card = `
     <div id="card-deus" class="card-deus">
         <div class="avatar">
-            <img src='${data.imagem.replace("'", "")}' class="avatar-background" loading='lazy'>
+            <img src='${data.Imagem.replace("'", "")}' class="avatar-background" loading='lazy'>
                 <div class="nome">
-                    <h1><b>${data.nome}</b></h4>
+                    <h1><b>${data.Nome}</b></h4>
                 </div>
             </img>
         </div>
 
         <div class="detalhe-deus">
-            <p><b>${data.titulo}</b></p>
-            <p><b>Cultura:</b> ${data.cultura}</p>
-            <p><b>Classe:</b> ${data.classe}</p>
-            <p><b>Tipo:</b> ${data.tipo}</p>
+            <p><b>${data.Titulo}</b></p>
+            <p><b>Cultura:</b> ${data.Cultura}</p>
+            <p><b>Classe:</b> ${data.Classe}</p>
+            <p><b>Tipo:</b> ${data.Tipo}</p>
             <div  class="btn-padrao">
                 <a href="${redireciona}">Mais Info</a>
             </div>
