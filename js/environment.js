@@ -7,7 +7,7 @@ urlApi()
 function urlApi() {
    
     if (arrayHostDev.filter(x => x.includes('/dev/smite/') || x.includes(":5500")).length > 0) {
-        urlAPISmite = 'https://saraiva89.com/dev/smiteapi/'
+        urlAPISmite = 'https://smite.azurewebsites.net/'
         return;
     }
 
