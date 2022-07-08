@@ -12,6 +12,6 @@ function urlApi() {
     }
 
     else {
-        urlAPISmite = 'https://saraiva89.com/prod/smiteapi/'
+        urlAPISmite = 'https://smite.azurewebsites.net/'
     }
 }

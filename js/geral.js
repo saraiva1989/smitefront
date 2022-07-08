@@ -45,7 +45,7 @@ function fechar() {
 
 async function buscarDeuses() {
     Loading(true)
-    let request = await fetch(`${urlAPISmite}`)
+    let request = await fetch(`${urlAPISmite}/api/Deuses/Listar`)
     listaDeusesData = await request.json()
     montarCardDeuses(listaDeusesData)
     Loading(false)
@@ -55,7 +55,7 @@ async function buscarDeuses() {
 async function buscarDetalheDeus() {
     Loading(true)
     let query = document.location.search.replace('?', '')
-    let request = await fetch(`${urlAPISmite}detalhe-deus.php?slug=${query}`)
+    let request = await fetch(`${urlAPISmite}/api/Deuses/Detalhes?slug=${query}`)
     let json = await request.json()
     Loading(false)
     return json
@@ -63,27 +63,27 @@ async function buscarDetalheDeus() {
 
 async function montarDetalheDeus() {
     let data = await buscarDetalheDeus()
-    document.getElementById('titulo-pagina').innerText = data.Nome
+    document.getElementById('titulo-pagina').innerText = data.nome
     let conteudo = document.getElementById('conteudo-detalhe')
     let html = ''
     html += componentDetalheBanner(data)
     html += componentDetalheTipo(data)
     html += componentHistoria(data)
-    html += componentHabilidades(data.Habilidades)
-    html += componentSkin(data.Skins)
+    html += componentHabilidades(data.habilidades)
+    html += componentSkin(data.skins)
     conteudo.innerHTML += html
 }
 
 async function montarDetalheDeusMobile() {
     let data = await buscarDetalheDeus()
-    document.getElementById('titulo-pagina').innerText = data.Nome
+    document.getElementById('titulo-pagina').innerText = data.nome
     let conteudo = document.getElementById('conteudo-detalhe')
     let html = ''
     html += componentDetalheBanner(data)
     html += componentDetalheTipo(data)
     html += componentHistoria(data)
-    html += componentTabelaHabilidadeMobile(data.Habilidades)
-    html += componentSkin(data.Skins)
+    html += componentTabelaHabilidadeMobile(data.habilidades)
+    html += componentSkin(data.skins)
     conteudo.innerHTML += html
 }
 
