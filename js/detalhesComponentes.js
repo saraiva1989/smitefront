@@ -118,7 +118,7 @@ function componentTabelaHabilidadeMobile(data) {
     data.forEach(element => {
         linha += `
                 <div>
-                    <h1>Aspectos Mortíferos</h1>
+                    <h1>${element.nome}</h1>
                     <p><img
                             src="${element.imagem}" alt=""
                             srcset=""></p>
