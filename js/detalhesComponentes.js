@@ -176,7 +176,7 @@ function componentSkin(data) {
                     <div id="card-deus" class="card-deus">
                         <div class="avatar">
                             <div class="avatar-background" alt="Avatar"
-                                style=" background-image: url('${element.imagem}');">
+                                style=" background-image: url('${element.imagem}'); background-repeat: round;">
                                 <div class="nome">
                                     <h1><b>${element.nome}</b></h4>
                                 </div>
